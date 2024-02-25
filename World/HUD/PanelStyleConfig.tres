@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=2]
+
+[resource]
+Button/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+Button/colors/font_color_hover = Color( 0.996078, 0.00392157, 0.00392157, 1 )
+CheckBox/colors/font_color = Color( 0.996078, 0.996078, 0.996078, 1 )
+CheckBox/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )

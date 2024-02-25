@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/Images/tilemap_packed2.png" type="Texture" id=1]
+[ext_resource path="res://World/terreno/FinishDiamond.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 126, 54, 18, 18 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Diamond" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 4, -4, -4, -4, -5, -3, -5, 0, -1, 4, 1, 4, 5, 0, 5, -3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Diamond_body_entered"]
